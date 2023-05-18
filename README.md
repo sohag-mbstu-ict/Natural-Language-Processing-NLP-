@@ -41,6 +41,9 @@ Tokens here is an ambiguous term. A token that can refer to words, subwords, or 
 
 As we know that NLP is used to build applications such as sentiment analysis, QA systems, languag translation, smart chatbots, voice systems, etc., hence, in order to build them, it becomes vital to understand the pattern in the text. The tokens, mentioned above, are very useful in finding and understanding these patterns. We can consider tokenization as the base step for other recipes such as stemming and lemmatization.
 
+
+As we know that NLP is used to build applications such as sentiment analysis, QA systems, languag translation, smart chatbots, voice systems, etc., hence, in order to build them, it becomes vital to understand the pattern in the text. The tokens, mentioned above, are very useful in finding and understanding these patterns. We can consider tokenization as the base step for other recipes such as stemming and lemmatization.
+
 # Stemming:
 Stemming is the process of reducing a word to its word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma. Stemming is important in natural language understanding (NLU) and natural language processing (NLP).
 
@@ -59,10 +62,9 @@ We all know these three words Universal,University & Universe are different in m
 #### Under-Stemming :
 
 Under-stemming is in a way you can say it's opposite of over-stemming. Here you pass words with the same meaning but stemmer returns you the different root words.
+
 ![](Screenshot/under_stemming.PNG)
+
 Above two words are the same, the only difference is singular and plural so we should have the same root word for both but this isn’t happening here it is providing us with two different root words.
-
-
-
 
 
