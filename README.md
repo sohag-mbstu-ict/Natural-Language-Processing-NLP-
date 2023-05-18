@@ -67,4 +67,11 @@ Under-stemming is in a way you can say it's opposite of over-stemming. Here you 
 
 Above two words are the same, the only difference is singular and plural so we should have the same root word for both but this isn’t happening here it is providing us with two different root words.
 
+# Lemmatization:
+Lemmatization is a linguistic term that means grouping together words with the same root or lemma but with different inflections or derivatives of meaning so they can be analyzed as one item. The aim is to take away inflectional suffixes and prefixes to bring out the word’s dictionary form.
+For example, to lemmatize the words “cats,” “cat’s,” and “cats’” means taking away the suffixes “s,” “’s,” and “s’” to bring out the root word “cat.” Lemmatization is used to train robots to speak and converse, making it important in the field of artificial intelligence (AI) known as “natural language processing (NLP)” or “natural language understanding.”
+
+![](Screenshot/stem_lemma.jpg)
+
+
 
