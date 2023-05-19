@@ -110,6 +110,56 @@ DF = number of documents containing a given term(d)/total number of documents in
 A Semantic Information is an information that carries significance or meaning for a given system or conceptual entity
 
 
+# Similarity of words using Gensim
+
+What is the most similar word to “king”? Is it “Canute” or is it “crowned”? It depends on what you mean by similar. “King” can be interchanged with “Canute”, but its attribute is “crown”. We will discuss how to perform these two kinds of similarity from word embeddings. Also touch on how to deal with the common issues of rare, frequent, and out-of-vocabulary words.
+
+#### What is Gensim?
+Gensim is an open-source library for unsupervised topic modeling and natural language processing, using modern statistical machine learning.
+
+
+
+```bash
+model = gensim.models.Word2Vec (documents, size=150, window=10, min_count=2, workers=10)
+model.train(documents,total_examples=len(documents),epochs=20)
+
+# get everything related to stuff on the bed
+w1 = ["bed",'sheet','pillow']
+w2 = ['couch']
+model.wv.most_similar (positive=w1,negative=w2,topn=10)
+```
+Output:
+
+[('duvet', 0.7087066173553467),
+
+ ('blanket', 0.6890629529953003),
+
+ ('mattress', 0.6853978633880615),
+
+ ('matress', 0.667702317237854),
+
+ ('quilt', 0.6663302779197693),
+
+ ('pillowcase', 0.6542825698852539),
+
+ ('sheets', 0.6388118267059326),
+
+ ('foam', 0.635508120059967),
+
+ ('pillows', 0.6337054371833801),
+
+ ('pillowcases', 0.6203763484954834)]
+
+```bash
+
+# similarity between two different words
+model.wv.similarity(w1="dirty",w2="smelly")
+```
+0.7617112
+
+
+
+
 
 
 
