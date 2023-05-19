@@ -167,7 +167,7 @@ Extractive and
 
 Abstractive methods.
 
-#### Extractive Text Summarization
+### Extractive Text Summarization
 
 It is the traditional method developed first. The main objective is to identify the significant sentences of the text and add them to the summary. You need to note that the summary obtained contains exact sentences from the original text.
 
