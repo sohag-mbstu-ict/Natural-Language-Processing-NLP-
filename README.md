@@ -157,6 +157,73 @@ model.wv.similarity(w1="dirty",w2="smelly")
 ```
 0.7617112
 
+#
+# Text Summarization
+Text Summarization is one of the techniques of Natural Language Generation, having the goal to produce a concise summary while preserving key information and overall meaning.
+
+Text summarization methods can be grouped into two main categories: 
+
+Extractive and 
+
+Abstractive methods.
+
+#### Extractive Text Summarization
+
+It is the traditional method developed first. The main objective is to identify the significant sentences of the text and add them to the summary. You need to note that the summary obtained contains exact sentences from the original text.
+
+
+#### TextRank algorithm
+
+TextRank is an extractive summarization technique. It is based on the concept that words which occur more frequently are significant. Hence , the sentences containing highly frequent words are important. Based on this , the algorithm assigns scores to each sentence in the text . The top-ranked sentences make it to the summary.
+
+#### Text Summarization using Lex Rank:
+
+This is an unsupervised machine learning based approach in which we use the textrank approach to find the summary of our sentences. Using cosine similarity and vector based algorithms, we find minimum cosine distance among various words and store the more similar words together.
+
+#### Text Summarization using LSA (Latent semantic analysis)
+
+Latent Semantic Analysis is a unsupervised learning algorithm that can be used for extractive text summarization. It extracts semantically significant sentences by applying singular value decomposition(SVD) to the matrix of term-document frequency.
+
+#### Text Summarization using Luhn
+
+Luhn Summarization algorithm’s approach is based on TF-IDF (Term Frequency-Inverse Document Frequency). It is useful when very low frequent words as well as highly frequent words(stopwords) are both not significant.
+#### Text Summarization using KL-Sum
+
+Another extractive method is the KL-Sum algorithm. It selects sentences based on similarity of word distribution as the original text. It aims to lower the KL-divergence criteria (learn more). It uses greedy optimization approach and keeps adding sentences till the KL-divergence decreases
+
+### Abstractive Text Summarization
+It is a more advanced method, many advancements keep coming out frequently(I will cover some of the best here). The approach is to identify the important sections, interpret the context and reproduce in a new way. This ensures that the core information is conveyed through the shortest text possible. Note that here, the sentences in summary are generated, not just extracted from original text.
+
+#### Summarization with T5 Transformers
+
+T5 is an encoder-decoder model. It converts all language problems into a text-to-text format.
+
+First, you need to import the tokenizer and corresponding model through below command.
+
+It is preferred to use T5ForConditionalGeneration model when the input and output are both sequences.
+
+#### Summarization with BART Transformers
+
+transformers library of HuggingFace supports summarization with BART models.
+
+Import the model and tokenizer. For problems where there is need to generate sequences , it is preferred to use BartForConditionalGeneration model.
+
+” bart-large-cnn” is a pretrained model, fine tuned especially for summarization task. You can load the model using from_pretrained() method
+
+#### Summarization with GPT-2 Transformers
+
+GPT-2 transformer is another major player in text summarization, introduced by OpenAI. Thanks to transformers, the process followed is same just like with BART Transformers. First, you have to import the tokenizer and model. Make sure that you import a LM Head type model, as it is necessary to generate sequences. Next, load the pretrained gpt-2 model and tokenizer .
+
+After loading the model, you have to encode the input text and pass it as an input to model.generate()
+
+#### Summarization with XLM Transformers
+
+Another transformer type that could be used for summarization are XLM Transformers.
+
+You can import the XLMWithLMHeadModel as it supports generation of sequences.You can load the pretrained xlm-mlm-en-2048 model and tokenizer with weights using from_pretrained() method.
+
+The nexts steps are same as the last three cases. The encoded input text is passed to generate() function with returns id sequence for the summary. You can decode and print the summary.
+
 
 
 
