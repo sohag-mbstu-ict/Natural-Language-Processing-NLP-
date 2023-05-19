@@ -109,7 +109,7 @@ DF = number of documents containing a given term(d)/total number of documents in
 
 A Semantic Information is an information that carries significance or meaning for a given system or conceptual entity
 
-
+#
 # Similarity of words using Gensim
 
 What is the most similar word to “king”? Is it “Canute” or is it “crowned”? It depends on what you mean by similar. “King” can be interchanged with “Canute”, but its attribute is “crown”. We will discuss how to perform these two kinds of similarity from word embeddings. Also touch on how to deal with the common issues of rare, frequent, and out-of-vocabulary words.
