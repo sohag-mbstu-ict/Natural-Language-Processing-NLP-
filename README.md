@@ -74,4 +74,46 @@ For example, to lemmatize the words “cats,” “cat’s,” and “cats’”
 ![](Screenshot/stem_lemma.jpg)
 
 
+#
+# Bag of Words (BOW) or Countvectorizer
+It is used to retrieve the information in a form vector or number from the words/phrases. This solves the classification problem to some extent in natural language processing.
+The working function of a bag of words is to count the occurrence of the word in the phases disregarding the semantic information and don’t know where in the phases or document. It is very easy to grasp the concept and implement it.
+
+Example
+
+![](Screenshot/bog.PNG)
+
+#
+# Term frequency and inverse document frequency (TF-IDF)
+
+In this model, some semantic information is collected by giving importance to uncommon words rather than common words.
+The term IDF means assigning a higher weight to the rare words in the document.
+TF-IDF = TF*IDF
+Example:
+
+![](Screenshot/TF_IDF.PNG)
+
+In the above example, uncommon words have more weights and common words have fewer weights.
+
+Terms in TF-IDF
+Document frequency: The document frequency tells how often a word will occur in the whole collection of sentences, the information is global and not specific to any sentence.
+
+DF = number of documents containing a given term(d)/total number of documents in corpus(D)
+
+#
+# Difference between Bag of Words (BOW) and TF-IDF in NLP with Python
+
+1. Bag of Words: Converting words to numbers with no semantic information.
+
+2. TF-IDF: It is also converting the words to numbers or vectors with some weighted information.
+
+A Semantic Information is an information that carries significance or meaning for a given system or conceptual entity
+
+
+
+
+
+
+
+
 
